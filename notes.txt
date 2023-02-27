@@ -1,0 +1,68 @@
+>> -D is for dev dependencies i.e local dependecies for dev env and not production or global env
+
+>> ^ this is for minor updates of the package and ~ is for major updates of the package. If we do not specify any of these, it means we dont want any updates for the package (stick to current version).
+
+>> what is package lock json?
+to know what exact version we are using in production we use package-lock.json. it locks the version for us. Never put it in .gitignore
+It maintains the hash of the package this hash ensures that exact version is running on server or not (maintains integrity)
+
+>> node modules is like DB of NPM. We can generate node modules from package-lock.json so there is no need to push node modules on git
+
+>> using CDN to include react is not a good way. Use packages instead
+
+>> npx means execute using npm
+>> npx parcel build index.html > will create a production build and put it in dist folder
+
+>> Remove "main": "app.js" from package.json file for production builds as we are specifying index.html as the entry point in the cmd
+
+>> HMR hot module replacement: parcel keeps track of all the files changed using File watcher algorithm.
+
+>> dist folder keeps the minified file
+
+>> polyfill - a code which is replacement for a newer version of code. If your browser does not understand promises then promises (ES6) code is converted to other code (replacement code)  and that is a polyfill. 
+Babel converts the code so that it can be understood by other older browsers. Eg. Modern JS code is not understood by old browsers
+
+>> Babel: is a js package that converts the newer js code to older code 
+
+>> Tree shaking: removing unwanted code. A lib gives you 10-20 helper functions but only 1-2 are used in production. Parcel will ignore the unwanted functions in the prod build.  
+
+>> npm is used when you want to install packages in your project whereas npx is used for execution
+npx == npm run
+
+>> babel-plugin-transform-remove-console: this package will remove console.log from the prod file. After installing configure it to use.
+.babel.rc is config for babel
+
+>> we should give key in the props of an element inoorder to avoid re-rendering of the dom i.e changing the DOM tree. Rendering means updating something in dom. Key makes it easy to put the new element in respective place without re-rendering the DOM, thus making it very efficient. Key should always be unique. 
+
+>> React.createElement gives us an object which is converted into HTML and then put on DOM
+
+>> if we have to make a big html file having header, navbar, and footer etc. we use JSX. 
+JSX is JavaScript XML. Writing html using js.
+JSX is NOT html inside javascript. It uses html like syntax and not html.
+JS executes JSX using babel using Abstract syntax tree. JSX uses React.createElement behind the scenes and React.createElement gives us an object which is converted into HTML and then put on DOM 
+
+>> React components: Functional comp and class based comp
+Functional comp is a NEW way of writing code. They are nothing but functions that returns some piece of JSX.
+Class based comp was always there i.e. old way of writing code
+Before executing the js code palced between {}, JSX first sanitizes it to ensure security and prevent cross-site attacks (XSS)
+
+>> using a component inside another component is called as component composition. 
+
+>> JSX/typescript/ES6 are not mandatory.
+
+>> React.Fragment: is a component exported by react. It is like an empty tag. JSX can only have one parent. We can mention it using <> </>
+
+>> can we use react fragment inside react fragment?
+
+>> To give inline style in react.
+const styleObj = {
+  backgroundColor: 'red'
+}
+now pass the above object in <div style={styleObj}></div>
+
+>> using ? is called as optional chaining
+
+>> Virtual DOM: we keep a representation of DOM in our code. We need this bcoz of reconciliation (react uses DIFF algo to find difference one tree from another that needs to determine what needs to be changed and just update that small portion) 
+
+>> Hooks are just normal js functions. usestate is used to create local state variable
+We need state variables to keep track of the variables. If some other component changes the value of the variable then we will get to know this. Hence, state variables came into picture 

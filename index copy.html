@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste React</title>
+</head>
+
+<body>
+  <div id="root">Not Rendered</div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+  <script>
+    const heading = React.createElement('h1', {
+      id: 'title'
+    }, 'Namaste React Everyone!');
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    // passing a react element inside the root.
+    root.render(heading)
+
+    /* if there are multiple headings already present in the DOM root element in line 12, react will replace them with the heading element we created in line 18 */
+    /* If we put our code starting from line 18 before importing the react CDN then it will not work showing React not defined */
+
+    /* Difference between async and defer? */
+
+    /* If we want to pass multple values as passed in line 20 ('namaste react everyone'), we pass them in an array */     
+  </script>
+</body>
+
+</html>

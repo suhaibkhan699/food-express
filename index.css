@@ -98,24 +98,23 @@
 }
 
 .search-container .search-input {
-  width: 25%;
+  width: 40%;
   box-sizing: border-box;
-  border-bottom-left-radius: 30px;
-  border-top-left-radius: 30px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
   background-color: #ffffff;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   padding: 14px 15px 14px 20px;
   border: 1px solid #aabcca;
   border-right: 0;
   color: #000000;
-  outline: none;  
-  font-family: 'Steamflix Grotesk', sans-serif;
+  outline: none;
 }
 
 .search-container .search-btn {
-  border-bottom-right-radius: 30px;
-  border-top-right-radius: 30px;
-  background-color: black;
+  border-bottom-right-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: #0768b3;
   box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
   color: #ffffff;
   padding: 15px 22px;
@@ -123,20 +122,9 @@
   cursor: pointer;
   border: none;
   outline: none;
-  font-family: 'Steamflix Grotesk', sans-serif;
 }
 .search-container .search-btn:hover {
   background-color: #016034;
-}
-
-.card .restaurant-name {
-  min-height: 30px;
-  overflow: hidden;
-}
-
-.card .restaurant-cuisines {
-  min-height: 35px;
-  overflow: hidden;
 }
 
 /* error message css */
@@ -151,7 +139,7 @@
   width: auto;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 40px 40px 40px;
+  justify-content: center;
 }
 
 .card {
@@ -198,7 +186,6 @@
   color: white;
   padding: 5px;
   margin-top: 5px;
-  font-weight: 100;
 }
 
 .card > span > h4:first-child .fa-star {
@@ -282,10 +269,6 @@
 
 .fa-heart {
   color: white;
-}
-
-.fa-location-dot {
-  color: black;
 }
 
 .footer > strong {
