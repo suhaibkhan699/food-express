@@ -2,18 +2,38 @@ import React from "react";
 import Body from './Components/Body'
 import Header from './Components/Header'
 import Footer from './Components/Footer'
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import RestaurantMenu from "./Components/RestaurantMenu";
 
-function App() {
+function AppLayout() {
   return (
     <div>
       <Header />
-      <Body />
+      <Outlet />
       <Footer />
     </div>
   )
 }
 
-export default App;
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    // errorElement: <Error />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
+      },
+    ],
+  },
+]);
+
+export default appRouter;
 
 /* ******************************************************************************************************************* */
 
