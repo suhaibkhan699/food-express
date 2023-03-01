@@ -37,6 +37,7 @@ const RestaurantMenu = () => {
         <div className="restaurant-summary-details">
           <h1 className="restaurant-title">{restaurant?.name}</h1><br />
           <p className="restaurant-tags">{restaurant?.cuisines?.join(", ")}</p> <br />
+          <p className="restaurant-tags"><i className="fa-solid fa-location-dot"></i> {restaurant?.area}</p> <br />
           <div className="restaurant-details">
             <div className="restaurant-rating">
               <i className="fa-solid fa-star"></i>
@@ -51,10 +52,10 @@ const RestaurantMenu = () => {
         </div>
       </div>
 
-      {/* <div className="restaurant-menu-content">
+      <div className="restaurant-menu-content">
         <div className="menu-items-container">
           <div className="menu-title-wrap">
-            <h3 className="menu-title">Recommended</h3>
+            {/* <h3 className="menu-title">Recommended</h3> */}
             <p className="menu-count">
               {Object.keys(restaurant?.menu?.items).length} ITEMS
             </p>
@@ -88,7 +89,7 @@ const RestaurantMenu = () => {
             ))}
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

@@ -16,8 +16,8 @@ const Header = () => {
       <div className="nav-items">
         <ul>
           <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
+          <li>About us</li>
+          <li>Contact us</li>
           <li>
             <i className="fa-solid fa-cart-shopping"></i>
           </li>

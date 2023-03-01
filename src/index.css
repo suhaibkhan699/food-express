@@ -245,6 +245,71 @@ a  {
   padding: 0 5px 3px 0;
 }
 
+.restaurant-menu-content {
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+p.menu-count {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+p.item-cost, h3.item-title {
+  padding-bottom: 10px;
+}
+
+.menu-items-container{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Steamflix Grotesk', sans-serif;
+}
+
+.restaurant-summary-details i.fa-solid.fa-location-dot {
+  color: white;
+  margin-right: 5px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  border-top: 1px solid lightgrey;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+p.item-desc {
+  max-width: 500px;
+  color: darkslategrey;
+  font-size: 13px;
+}
+
+.menu-item-details {
+  align-self: flex-start;
+}
+
+.menu-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: center;
+}
+
+.menu-img-wrapper .add-btn{
+  width: 100px;
+  padding: 5px;
+  background-color: white;
+  border-width: 1px;
+  margin-top: 1px;
+  font-family: 'Steamflix Grotesk', sans-serif;
+}
+
+.menu-item-img{
+  max-width: 200px;
+  border-radius: 10px;
+}
+
 /*Shimmer CSS */
 .shimmer-container {
   display: flex;
