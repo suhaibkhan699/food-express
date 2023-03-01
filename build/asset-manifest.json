@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.97047cb5.css",
+    "main.js": "/static/js/main.0eab23a9.js",
+    "static/js/787.0c8eb1f8.chunk.js": "/static/js/787.0c8eb1f8.chunk.js",
+    "static/media/Food Fire Logo.png": "/static/media/Food Fire Logo.3e68f6b5feda9b1a3c1b.png",
+    "index.html": "/index.html",
+    "main.97047cb5.css.map": "/static/css/main.97047cb5.css.map",
+    "main.0eab23a9.js.map": "/static/js/main.0eab23a9.js.map",
+    "787.0c8eb1f8.chunk.js.map": "/static/js/787.0c8eb1f8.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.97047cb5.css",
+    "static/js/main.0eab23a9.js"
+  ]
+}
