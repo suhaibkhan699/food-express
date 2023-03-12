@@ -4,14 +4,16 @@ import Header from './Components/Header'
 import Footer from './Components/Footer'
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import RestaurantMenu from "./Components/RestaurantMenu";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 function AppLayout() {
   return (
-    <div>
+    <Provider store={store}>
       <Header />
       <Outlet />
       <Footer />
-    </div>
+    </Provider>
   )
 }
 

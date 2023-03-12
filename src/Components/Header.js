@@ -1,5 +1,5 @@
-import { useState } from "react";
-import FoodFireLogo from "../Images/Food Fire Logo.png";
+import { useSelector } from "react-redux";
+
 
 // Title component for display logo
 const Title = () => (
@@ -10,6 +10,7 @@ const Title = () => (
 
 // Header component for header section: Logo, Nav Items
 const Header = () => {
+  const cartItems = useSelector((store) => store.cart.items)
   return (
     <div className="header">
       <Title />
@@ -18,9 +19,10 @@ const Header = () => {
           <li>Home</li>
           <li>About us</li>
           <li>Contact us</li>
-          <li>
+          {/* <li>
             <i className="fa-solid fa-cart-shopping"></i>
-          </li>
+          </li> */}
+          <li>Cart({cartItems.length})</li>
         </ul>
       </div>
     </div>

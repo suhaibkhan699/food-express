@@ -1,15 +1,20 @@
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom"; // import useParams for read `resId`
 import {
   swiggy_menu_api_URL,
   IMG_CDN_URL,
   ITEM_IMG_CDN_URL,
 } from "../Constants";
+import { addItem } from "../utils/cartSlice";
+import AddRemoveBtn from "./AddRemoveBtn";
 import Shimmer from "./Shimmer";
+
 
 const RestaurantMenu = () => {
   const { resId } = useParams(); // call useParams and get value of restaurant id using object destructuring
   const [restaurant, setRestaurant] = useState(null); // call useState to store the api data in res
+  const dispatch = useDispatch()
   useEffect(() => {
     getRestaurantInfo(); // call getRestaurantInfo function so it fetch api data and set data in restaurant state variable
   }, []);
@@ -47,7 +52,6 @@ const RestaurantMenu = () => {
                 <span>{restaurant?.avgRating}</span>
               </div>
               <div className="restaurant-rating-slash">|</div>
-              {/* <div>{restaurant?.sla?.slaString}</div> */}
               <div>{restaurant?.totalRatingsString}</div>
               <div className="restaurant-rating-slash">|</div>
               <div>{restaurant?.costForTwoMsg}</div>
@@ -58,7 +62,6 @@ const RestaurantMenu = () => {
         <div className="restaurant-menu-content">
           <div className="menu-items-container">
             <div className="menu-title-wrap">
-              {/* <h3 className="menu-title">Recommended</h3> */}
               <p className="menu-count">
                 {Object.keys(restaurant?.menu?.items).length} ITEMS
               </p>
@@ -86,7 +89,7 @@ const RestaurantMenu = () => {
                         alt={item?.name}
                       />
                     )}
-                    <button className="add-btn"> ADD +</button>
+                    <AddRemoveBtn {...item} />
                   </div>
                 </div>
               ))}

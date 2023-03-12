@@ -303,10 +303,11 @@ p.item-desc {
   border-width: 1px;
   margin-top: 1px;
   font-family: 'Steamflix Grotesk', sans-serif;
+  cursor: pointer;
 }
 
 .menu-item-img{
-  max-width: 200px;
+  max-width: 180px;
   border-radius: 10px;
 }
 
