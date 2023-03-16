@@ -1,11 +1,12 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 
 // Title component for display logo
 const Title = () => (
-  <a href="/">
+  <Link to={'/'}>
     <h1>Food Express</h1>
-  </a>
+  </Link>
 );
 
 // Header component for header section: Logo, Nav Items

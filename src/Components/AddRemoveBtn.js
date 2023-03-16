@@ -7,9 +7,20 @@ const AddRemoveBtn = (item) => {
   // const item = { ...item }
   let [counter, setCounter] = useState(0)
   const dispatch = useDispatch()
+  const addRemoveButton = {
+    border: '1px solid black', width: '80px',
+    display: 'flex',
+    padding: '5px 5px',
+    marginTop: '1px',
+    alignItems: 'center',
+    justifyContent: 'space-between'
+  }
+  const button = {
+    cursor: 'pointer'
+  }
   return (
-    <div>
-      <i className="fa-solid fa-circle-minus" onClick={() => {
+    <div style={addRemoveButton}>
+      <i className="fa-solid fa-minus" style={button} onClick={() => {
         setCounter(counter => {
           if ((counter - 1) < 0) {
             return 0
@@ -22,7 +33,7 @@ const AddRemoveBtn = (item) => {
         }
       }}></i>
       {counter}
-      <i className="fa-solid fa-circle-plus" onClick={() => {
+      <i className="fa-solid fa-plus" style={button} onClick={() => {
         setCounter(counter => {
           return counter + 1
         })
