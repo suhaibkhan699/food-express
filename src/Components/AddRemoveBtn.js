@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { addItem, removeItem } from '../utils/cartSlice'
 
 
 const AddRemoveBtn = (item) => {
-  // const item = { ...item }
-  let [counter, setCounter] = useState(0)
+  const cartItems = useSelector((store) => store.cart.items)
   const dispatch = useDispatch()
+  const itemsCount = cartItems.filter(cartItem => cartItem.id === item.id)
+  let [counter, setCounter] = useState(itemsCount.length)
   const addRemoveButton = {
     border: '1px solid black', width: '80px',
     display: 'flex',

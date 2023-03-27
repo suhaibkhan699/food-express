@@ -5,6 +5,7 @@ import {
   swiggy_menu_api_URL,
   IMG_CDN_URL,
   ITEM_IMG_CDN_URL,
+  restaurantList,
 } from "../Constants";
 import { addItem } from "../utils/cartSlice";
 import AddRemoveBtn from "./AddRemoveBtn";
@@ -21,9 +22,11 @@ const RestaurantMenu = () => {
 
   async function getRestaurantInfo() {
     try {
-      const response = await fetch(swiggy_menu_api_URL + resId);
+      const response = await fetch(swiggy_menu_api_URL + resId + '&submitAction=ENTER');
       const json = await response.json();
-      setRestaurant(json?.data);
+      console.log(json.data.cards[2].groupedCard.cardGroupMap.REGULAR.cards[2])
+      // setRestaurant(json?.data);
+      setRestaurant(restaurantList.data);
     } catch (error) {
       console.log(error);
     }
